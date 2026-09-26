@@ -1,4 +1,5 @@
 import numpy as np
+from fopdt import referenceModel
 def optimize(y: np.ndarray, u: np.ndarray, tau: float = 5.0, delay_time: float = 3.0, ts: float = 1.0) -> dict:
     # 建立虛擬參考訊號 r_bar
     ref_model = referenceModel(tau=tau, delay_time=delay_time, ts=ts)
